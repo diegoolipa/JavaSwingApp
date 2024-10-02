@@ -10,11 +10,9 @@ package com.diego.pe.cpresentacion;
  */
 public class Calculadora extends javax.swing.JPanel {
 
-    /**
-     * Creates new form Calculadora
-     */
     public Calculadora() {
         initComponents();
+        
     }
 
     /**
@@ -29,25 +27,25 @@ public class Calculadora extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         tfResultado = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButton17 = new javax.swing.JButton();
-        jButton18 = new javax.swing.JButton();
-        jButton19 = new javax.swing.JButton();
-        jButton20 = new javax.swing.JButton();
+        btnDivision = new javax.swing.JButton();
+        btnProcentaje = new javax.swing.JButton();
+        btnce = new javax.swing.JButton();
+        btncc = new javax.swing.JButton();
+        btn7 = new javax.swing.JButton();
+        btn8 = new javax.swing.JButton();
+        btn9 = new javax.swing.JButton();
+        btnMultiplicacion = new javax.swing.JButton();
+        btn6 = new javax.swing.JButton();
+        btnResta = new javax.swing.JButton();
+        btn5 = new javax.swing.JButton();
+        btn4 = new javax.swing.JButton();
+        btnSuma = new javax.swing.JButton();
+        btn3 = new javax.swing.JButton();
+        btn2 = new javax.swing.JButton();
+        btn1 = new javax.swing.JButton();
+        btn0 = new javax.swing.JButton();
+        btnIgual = new javax.swing.JButton();
+        btnPunto = new javax.swing.JButton();
         jButton21 = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(243, 243, 243));
@@ -60,7 +58,6 @@ public class Calculadora extends javax.swing.JPanel {
         tfResultado.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
         tfResultado.setForeground(new java.awt.Color(0, 0, 102));
         tfResultado.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
-        tfResultado.setText("0");
         tfResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 tfResultadoActionPerformed(evt);
@@ -68,110 +65,186 @@ public class Calculadora extends javax.swing.JPanel {
         });
         jPanel1.add(tfResultado, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 48, 370, 119));
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(102, 102, 102));
-        jButton2.setText("/");
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 70, 70));
-
-        jButton3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(102, 102, 102));
-        jButton3.setText("%");
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 70, 70));
-
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(102, 102, 102));
-        jButton4.setText("ce");
-        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 70, 70));
-
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(102, 102, 102));
-        jButton5.setText("cc");
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 70, 70));
-
-        jButton6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(102, 102, 102));
-        jButton6.setText("7");
-        jPanel1.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 70, 70));
-
-        jButton7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(102, 102, 102));
-        jButton7.setText("8");
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 290, 70, 70));
-
-        jButton8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(102, 102, 102));
-        jButton8.setText("9");
-        jPanel1.add(jButton8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 290, 70, 70));
-
-        jButton9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(102, 102, 102));
-        jButton9.setText("x");
-        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 70, 70));
-
-        jButton10.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(102, 102, 102));
-        jButton10.setText("6");
-        jPanel1.add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 390, 70, 70));
-
-        jButton11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(102, 102, 102));
-        jButton11.setText("-");
-        jPanel1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 390, 70, 70));
-
-        jButton12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton12.setForeground(new java.awt.Color(102, 102, 102));
-        jButton12.setText("5");
-        jPanel1.add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 390, 70, 70));
-
-        jButton13.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(102, 102, 102));
-        jButton13.setText("4");
-        jPanel1.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 70, 70));
-
-        jButton14.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton14.setForeground(new java.awt.Color(102, 102, 102));
-        jButton14.setText("+");
-        jPanel1.add(jButton14, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 480, 70, 70));
-
-        jButton15.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton15.setForeground(new java.awt.Color(102, 102, 102));
-        jButton15.setText("3");
-        jPanel1.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 480, 70, 70));
-
-        jButton16.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton16.setForeground(new java.awt.Color(102, 102, 102));
-        jButton16.setText("2");
-        jPanel1.add(jButton16, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 480, 70, 70));
-
-        jButton17.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton17.setForeground(new java.awt.Color(102, 102, 102));
-        jButton17.setText("1");
-        jPanel1.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 70, 70));
-
-        jButton18.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton18.setForeground(new java.awt.Color(102, 102, 102));
-        jButton18.setText("0");
-        jPanel1.add(jButton18, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, 70, 70));
-
-        jButton19.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton19.setForeground(new java.awt.Color(102, 102, 102));
-        jButton19.setText("=");
-        jPanel1.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 570, 70, 70));
-
-        jButton20.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jButton20.setForeground(new java.awt.Color(102, 102, 102));
-        jButton20.setText(".");
-        jButton20.addActionListener(new java.awt.event.ActionListener() {
+        btnDivision.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnDivision.setForeground(new java.awt.Color(102, 102, 102));
+        btnDivision.setText("/");
+        btnDivision.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton20ActionPerformed(evt);
+                btnDivisionActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton20, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 570, 70, 70));
+        jPanel1.add(btnDivision, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, 70, 70));
+
+        btnProcentaje.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnProcentaje.setForeground(new java.awt.Color(102, 102, 102));
+        btnProcentaje.setText("%");
+        jPanel1.add(btnProcentaje, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 70, 70));
+
+        btnce.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnce.setForeground(new java.awt.Color(102, 102, 102));
+        btnce.setText("ce");
+        jPanel1.add(btnce, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 70, 70));
+
+        btncc.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btncc.setForeground(new java.awt.Color(102, 102, 102));
+        btncc.setText("cc");
+        jPanel1.add(btncc, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 70, 70));
+
+        btn7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn7.setForeground(new java.awt.Color(102, 102, 102));
+        btn7.setText("7");
+        btn7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn7ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 70, 70));
+
+        btn8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn8.setForeground(new java.awt.Color(102, 102, 102));
+        btn8.setText("8");
+        btn8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn8ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 280, 70, 70));
+
+        btn9.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn9.setForeground(new java.awt.Color(102, 102, 102));
+        btn9.setText("9");
+        btn9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn9, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 280, 70, 70));
+
+        btnMultiplicacion.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnMultiplicacion.setForeground(new java.awt.Color(102, 102, 102));
+        btnMultiplicacion.setText("x");
+        btnMultiplicacion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMultiplicacionActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMultiplicacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 70, 70));
+
+        btn6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn6.setForeground(new java.awt.Color(102, 102, 102));
+        btn6.setText("6");
+        btn6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn6ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 370, 70, 70));
+
+        btnResta.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnResta.setForeground(new java.awt.Color(102, 102, 102));
+        btnResta.setText("-");
+        btnResta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRestaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnResta, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 370, 70, 70));
+
+        btn5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn5.setForeground(new java.awt.Color(102, 102, 102));
+        btn5.setText("5");
+        btn5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn5ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 70, 70));
+
+        btn4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn4.setForeground(new java.awt.Color(102, 102, 102));
+        btn4.setText("4");
+        btn4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn4ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 370, 70, 70));
+
+        btnSuma.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnSuma.setForeground(new java.awt.Color(102, 102, 102));
+        btnSuma.setText("+");
+        btnSuma.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSumaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSuma, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 460, 70, 70));
+
+        btn3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn3.setForeground(new java.awt.Color(102, 102, 102));
+        btn3.setText("3");
+        btn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, 70, 70));
+
+        btn2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn2.setForeground(new java.awt.Color(102, 102, 102));
+        btn2.setText("2");
+        btn2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 460, 70, 70));
+
+        btn1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn1.setForeground(new java.awt.Color(102, 102, 102));
+        btn1.setText("1");
+        btn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 460, 70, 70));
+
+        btn0.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btn0.setForeground(new java.awt.Color(102, 102, 102));
+        btn0.setText("0");
+        btn0.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn0ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btn0, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 550, 70, 70));
+
+        btnIgual.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnIgual.setForeground(new java.awt.Color(102, 102, 102));
+        btnIgual.setText("=");
+        btnIgual.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+        btnIgual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnIgualActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnIgual, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 550, 70, 70));
+
+        btnPunto.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnPunto.setForeground(new java.awt.Color(102, 102, 102));
+        btnPunto.setText(".");
+        btnPunto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPuntoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnPunto, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 550, 70, 70));
 
         jButton21.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton21.setForeground(new java.awt.Color(102, 102, 102));
         jButton21.setText("@");
-        jPanel1.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 570, 70, 70));
+        jPanel1.add(jButton21, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 550, 70, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -185,36 +258,130 @@ public class Calculadora extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    private void operacion(String sentencia){
+        if (sentencia.contains("+")) {
+            this.numeroOperado(sentencia, "\\+");
+            
+        } else if (sentencia.contains("-")){
+            this.numeroOperado(sentencia, "-");
+            
+        }else if (sentencia.contains("/")){
+            this.numeroOperado(sentencia, "/");
+            
+        }else if (sentencia.contains("*")){
+            this.numeroOperado(sentencia, "\\*");
+        }
+    }
+    
+    public void numeroOperado(String sentencia, String Simbolo){
+        String[] numero =  sentencia.split(Simbolo);
+        float primerNumero = Float.parseFloat(numero[0]) ;
+        float SegundoNumero = Float.parseFloat(numero[1]) ;
+        float resultado = 0;
+        if (Simbolo.equals("\\+")) {
+            resultado = primerNumero + SegundoNumero;
+        }else if(Simbolo.equals("-")){
+            resultado = primerNumero - SegundoNumero;
+        }else if(Simbolo.equals("\\*")){
+            resultado = primerNumero * SegundoNumero;
+        }else if(Simbolo.equals("/")){
+            resultado = primerNumero / SegundoNumero;
+        }
+        this.tfResultado.setText(String.valueOf(resultado));
+    }
+    
     private void tfResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfResultadoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfResultadoActionPerformed
 
-    private void jButton20ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton20ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton20ActionPerformed
+    private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuntoActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + ".");
+
+    }//GEN-LAST:event_btnPuntoActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "7");
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "8");
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "9");
+    }//GEN-LAST:event_btn9ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "4");
+    }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "5");
+    }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "6");
+    }//GEN-LAST:event_btn6ActionPerformed
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "1");
+    }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "2");
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "3");
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btn0ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn0ActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "0");
+    }//GEN-LAST:event_btn0ActionPerformed
+
+    private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "/");
+    }//GEN-LAST:event_btnDivisionActionPerformed
+
+    private void btnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacionActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "*");
+    }//GEN-LAST:event_btnMultiplicacionActionPerformed
+
+    private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "-");
+    }//GEN-LAST:event_btnRestaActionPerformed
+
+    private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
+        this.tfResultado.setText( this.tfResultado.getText() + "+");
+    }//GEN-LAST:event_btnSumaActionPerformed
+
+    private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
+        this.operacion(this.tfResultado.getText());
+    }//GEN-LAST:event_btnIgualActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton17;
-    private javax.swing.JButton jButton18;
-    private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton20;
+    private javax.swing.JButton btn0;
+    private javax.swing.JButton btn1;
+    private javax.swing.JButton btn2;
+    private javax.swing.JButton btn3;
+    private javax.swing.JButton btn4;
+    private javax.swing.JButton btn5;
+    private javax.swing.JButton btn6;
+    private javax.swing.JButton btn7;
+    private javax.swing.JButton btn8;
+    private javax.swing.JButton btn9;
+    private javax.swing.JButton btnDivision;
+    private javax.swing.JButton btnIgual;
+    private javax.swing.JButton btnMultiplicacion;
+    private javax.swing.JButton btnProcentaje;
+    private javax.swing.JButton btnPunto;
+    private javax.swing.JButton btnResta;
+    private javax.swing.JButton btnSuma;
+    private javax.swing.JButton btncc;
+    private javax.swing.JButton btnce;
     private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField tfResultado;
