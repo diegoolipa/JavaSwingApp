@@ -83,11 +83,21 @@ public class Calculadora extends javax.swing.JPanel {
         btnce.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnce.setForeground(new java.awt.Color(102, 102, 102));
         btnce.setText("ce");
+        btnce.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnceActionPerformed(evt);
+            }
+        });
         jPanel1.add(btnce, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 70, 70));
 
         btncc.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btncc.setForeground(new java.awt.Color(102, 102, 102));
         btncc.setText("cc");
+        btncc.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnccActionPerformed(evt);
+            }
+        });
         jPanel1.add(btncc, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 190, 70, 70));
 
         btn7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -261,23 +271,33 @@ public class Calculadora extends javax.swing.JPanel {
     
     private void operacion(String sentencia){
         if (sentencia.contains("+")) {
-            this.numeroOperado(sentencia, "\\+");
+            this.numeroOperado(sentencia, "\\+" ,"+");
             
         } else if (sentencia.contains("-")){
-            this.numeroOperado(sentencia, "-");
+            this.numeroOperado(sentencia, "-","-");
             
         }else if (sentencia.contains("/")){
-            this.numeroOperado(sentencia, "/");
+            this.numeroOperado(sentencia, "/" ,"/");
             
         }else if (sentencia.contains("*")){
-            this.numeroOperado(sentencia, "\\*");
+            this.numeroOperado(sentencia, "\\*","*");
         }
     }
     
-    public void numeroOperado(String sentencia, String Simbolo){
-        String[] numero =  sentencia.split(Simbolo);
-        float primerNumero = Float.parseFloat(numero[0]) ;
-        float SegundoNumero = Float.parseFloat(numero[1]) ;
+    public void numeroOperado(String sentencia, String Simbolo, String valida){
+        String[] cortar =  sentencia.split("");
+        String[] numero;
+        float primerNumero =  0;
+        float SegundoNumero = 0;
+        if(cortar[0].contains(valida)){
+            numero =  sentencia.substring(1,sentencia.length()).split(Simbolo);
+            primerNumero = Float.parseFloat(numero[0])-Float.parseFloat(numero[0])*2 ;
+            SegundoNumero = 0 ;
+        }else{
+            numero =  sentencia.split(Simbolo);
+            primerNumero = Float.parseFloat(numero[0]) ;
+            SegundoNumero = Float.parseFloat(numero[1]) ; 
+        }
         float resultado = 0;
         if (Simbolo.equals("\\+")) {
             resultado = primerNumero + SegundoNumero;
@@ -341,24 +361,39 @@ public class Calculadora extends javax.swing.JPanel {
     }//GEN-LAST:event_btn0ActionPerformed
 
     private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
+        this.operacion(this.tfResultado.getText());
         this.tfResultado.setText( this.tfResultado.getText() + "/");
     }//GEN-LAST:event_btnDivisionActionPerformed
 
     private void btnMultiplicacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMultiplicacionActionPerformed
+        this.operacion(this.tfResultado.getText());
         this.tfResultado.setText( this.tfResultado.getText() + "*");
     }//GEN-LAST:event_btnMultiplicacionActionPerformed
 
     private void btnRestaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaActionPerformed
+        this.operacion(this.tfResultado.getText());
         this.tfResultado.setText( this.tfResultado.getText() + "-");
     }//GEN-LAST:event_btnRestaActionPerformed
 
     private void btnSumaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumaActionPerformed
+        this.operacion(this.tfResultado.getText());
         this.tfResultado.setText( this.tfResultado.getText() + "+");
     }//GEN-LAST:event_btnSumaActionPerformed
 
     private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
         this.operacion(this.tfResultado.getText());
     }//GEN-LAST:event_btnIgualActionPerformed
+
+    private void btnccActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnccActionPerformed
+        this.tfResultado.setText("");
+    }//GEN-LAST:event_btnccActionPerformed
+
+    private void btnceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnceActionPerformed
+        int tamanio = this.tfResultado.getText().length();
+        this.tfResultado.setText(
+                this.tfResultado.getText().substring(0,tamanio-1)
+        );
+    }//GEN-LAST:event_btnceActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
