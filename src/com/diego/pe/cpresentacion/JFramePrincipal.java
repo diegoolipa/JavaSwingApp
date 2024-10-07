@@ -104,6 +104,20 @@ public class JFramePrincipal extends javax.swing.JFrame {
         Calculadora cal = new Calculadora();
         cal.setSize(413, 655);
         cal.setLocation(0,0);
+        
+        
+        
+        
+        
+        
+      
+       
+       
+       
+       
+        
+       
+       
         principal.removeAll();
         principal.add(cal, BorderLayout.CENTER);
         principal.revalidate();
