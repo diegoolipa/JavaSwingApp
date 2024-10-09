@@ -1,6 +1,8 @@
 
 package com.diego.pe.cmodelo;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class TipoDocumento {
@@ -10,7 +12,8 @@ public class TipoDocumento {
     private String estado;
     private int orden;
     //---
-    private Date fecha;
+    private Date fechaRegistro;
+    private Date fechaActuliza; 
 
 //    public TipoDocumento(int idTipoDocumento, String nombre, String sigla, String estado, int orden, Date fecha) {
 //        this.idTipoDocumento = idTipoDocumento;
@@ -61,18 +64,28 @@ public class TipoDocumento {
         this.orden = orden;
     }
 
-    public Date getFecha() {
-        return fecha;
+    public String getFecha() {
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+        return formato.format(fechaRegistro);
     }
 
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    public void setFecha(String  fechaRegistro) throws ParseException {
+        SimpleDateFormat formato = new SimpleDateFormat("dd-MM-yyyy");
+        this.fechaRegistro = formato.parse(fechaRegistro);
     }
 
-    public void getFecha(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public String getFechaActuliza() {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        return dateFormat.format(fechaActuliza);
     }
 
+    public void setFechaActuliza(String fechaActuliza) throws ParseException {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+        this.fechaActuliza = dateFormat.parse(fechaActuliza);
+    }
+
+    
+ 
 
     
     
