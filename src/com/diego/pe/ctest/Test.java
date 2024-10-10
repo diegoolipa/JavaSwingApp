@@ -12,7 +12,7 @@ public class Test {
     TipoDocumento td = new TipoDocumento();
     
     public  void insertar() throws SQLException, ParseException{
-        td.setNombre("ASDASDAS DASD  Nacional de Identidad");
+        td.setNombre("jkasbdjhasbvd asfdbhsa dvhka");
         td.setEstado("1");
         td.setOrden(1);
         td.setSigla("DNIA");
