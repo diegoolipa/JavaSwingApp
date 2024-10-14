@@ -6,6 +6,7 @@ import com.diego.pe.cdatosdao.TipoDocumentoDao;
 import com.diego.pe.cmodelo.TipoDocumento;
 import com.diego.pe.db.Conexion;
 import java.sql.SQLException;
+import javax.swing.JTable;
 
 public class TipoDocumentoBO {
     private String mensaje;
@@ -48,5 +49,15 @@ public class TipoDocumentoBO {
             c.close();
         }
         return mensaje;
+    }
+    
+    public void listarTipoDocumento(JTable table){
+        Connection c = Conexion.getConnection();
+        tdd.listarTipoDocumento(c, table);
+        try {
+            c.close();
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } 
     }
 }
