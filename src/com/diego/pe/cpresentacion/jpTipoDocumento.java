@@ -6,6 +6,10 @@ package com.diego.pe.cpresentacion;
 
 import com.diego.pe.cmodelo.TipoDocumento;
 import com.diego.pe.cnegocio.TipoDocumentoBO;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Soporte
@@ -13,6 +17,7 @@ import com.diego.pe.cnegocio.TipoDocumentoBO;
 public class jpTipoDocumento extends javax.swing.JPanel {
     TipoDocumentoBO tdbo = new  TipoDocumentoBO();
     TipoDocumento td = new TipoDocumento();
+    String idTipoDocumento;
     
     public jpTipoDocumento() {
         initComponents();
@@ -85,9 +90,14 @@ public class jpTipoDocumento extends javax.swing.JPanel {
 
             }
         ));
+        tablaTipoDocumento.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tablaTipoDocumentoMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(tablaTipoDocumento);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, 510, 390));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 530, 390));
 
         txtNombre.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         txtNombre.setBorder(null);
@@ -246,7 +256,14 @@ public class jpTipoDocumento extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-
+        try {
+//            TipoDocumento tdf = new TipoDocumento();
+            td.setIdTipoDocumento(Integer.parseInt(idTipoDocumento));
+            tdbo.eliminarTipoDocomento(td);
+            listarTipoDocumento();
+        } catch (Exception diego) {
+            JOptionPane.showMessageDialog(null, "Error" + diego.getMessage());
+        }
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
@@ -260,23 +277,34 @@ public class jpTipoDocumento extends javax.swing.JPanel {
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
                 
-//        try {
-//            td.setNombre(txtNombre.getText());
-//            td.setEstado(txtEstado.getText());
-//            td.setOrden(Integer.parseInt(txtEstado.getText()));
-//            td.setSigla(txtSigla.getText());
-//            td.setFecha(txtFechaRegistro.getText());
-//            td.setFechaActuliza(txtFechaActializacion.getText());
-//            tdbo.agregarTipoDocomento(td); 
-//            JOptionPane.showMessageDialog(null, ":) se guardo corectamente");
-//        } catch (SQLException e) {
-//            JOptionPane.showMessageDialog(null, "Error: al guardar Tipo documento ");
-//        }
+        try {
+            td.setNombre(txtNombre.getText());
+            td.setEstado(txtEstado.getText());
+            td.setOrden(Integer.parseInt(txtEstado.getText()));
+            td.setSigla(txtSigla.getText());
+            td.setFecha(txtFechaRegistro.getText());
+            td.setFechaActuliza(txtFechaActializacion.getText());
+            tdbo.agregarTipoDocomento(td);
+            listarTipoDocumento();
+            JOptionPane.showMessageDialog(null, ":) se guardo corectamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error: al guardar Tipo documento ");
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEditarActionPerformed
+
+    private void tablaTipoDocumentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaTipoDocumentoMouseClicked
+        int seleccion = tablaTipoDocumento.rowAtPoint(evt.getPoint());
+        idTipoDocumento = tablaTipoDocumento.getValueAt(seleccion, 0)+"";
+        txtNombre.setText(tablaTipoDocumento.getValueAt(seleccion, 1)+"");
+        
+        
+        
+        System.out.println(idTipoDocumento);
+    }//GEN-LAST:event_tablaTipoDocumentoMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

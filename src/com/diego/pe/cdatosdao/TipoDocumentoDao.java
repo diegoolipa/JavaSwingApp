@@ -81,7 +81,6 @@ public class TipoDocumentoDao {
     
     //Cuarto Metodo - Listar Tipo Documento.
     public void listarTipoDocumento(Connection conn, JTable table){
-        System.out.println("aquiiii");
         DefaultTableModel model;
         Statement statement = null;
         ResultSet resultSet = null;
@@ -89,7 +88,7 @@ public class TipoDocumentoDao {
         String[] columnas = {"ID","NOMBRE","SIGLA","ESTADO","ORDEN","FECHA"};
         model = new DefaultTableModel(null,columnas);
         
-        String sql = "SELECT * FROM TIPO_DOCUMENTO";
+        String sql = "SELECT * FROM TIPO_DOCUMENTO ORDER BY ORDEN desc";
         String[] datosTP = new String[6];
         
         try {
