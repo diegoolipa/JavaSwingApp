@@ -257,7 +257,6 @@ public class jpTipoDocumento extends javax.swing.JPanel {
 
     private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
         try {
-//            TipoDocumento tdf = new TipoDocumento();
             td.setIdTipoDocumento(Integer.parseInt(idTipoDocumento));
             tdbo.eliminarTipoDocomento(td);
             listarTipoDocumento();
@@ -292,17 +291,45 @@ public class jpTipoDocumento extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
+    public boolean valida(){
+        if(txtNombre.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Nombre es requerido");
+            return false;
+        }else if(txtSigla.getText().equals("")){
+            JOptionPane.showMessageDialog(null, "Sigla es requerido");
+            return false;
+        }
+        return true;
+    }
+    
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
-        // TODO add your handling code here:
+        try {
+            if(valida()){
+                td.setIdTipoDocumento(Integer.parseInt(idTipoDocumento));
+                td.setNombre(txtNombre.getText());
+                td.setEstado(txtEstado.getText());
+                td.setOrden(Integer.parseInt(txtEstado.getText()));
+                td.setSigla(txtSigla.getText());
+                td.setFecha(txtFechaRegistro.getText());
+                td.setFechaActuliza(txtFechaActializacion.getText());
+                tdbo.modificarTipoDocumento(td);
+                listarTipoDocumento();
+                JOptionPane.showMessageDialog(null, ":) se actualizó corectamente");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error: al actualizar Tipo documento ");
+        }
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void tablaTipoDocumentoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tablaTipoDocumentoMouseClicked
         int seleccion = tablaTipoDocumento.rowAtPoint(evt.getPoint());
         idTipoDocumento = tablaTipoDocumento.getValueAt(seleccion, 0)+"";
         txtNombre.setText(tablaTipoDocumento.getValueAt(seleccion, 1)+"");
-        
-        
-        
+        txtSigla.setText(tablaTipoDocumento.getValueAt(seleccion, 2)+"");
+        txtOrden.setText(tablaTipoDocumento.getValueAt(seleccion, 3)+"");
+        txtEstado.setText(tablaTipoDocumento.getValueAt(seleccion, 4)+"");
+        txtFechaRegistro.setText(tablaTipoDocumento.getValueAt(seleccion, 5)+"");
+        txtFechaActializacion.setText(tablaTipoDocumento.getValueAt(seleccion, 5)+"");
         System.out.println(idTipoDocumento);
     }//GEN-LAST:event_tablaTipoDocumentoMouseClicked
 
