@@ -5,6 +5,7 @@
         <group>
             <file>file:/D:/dlp/dlp_java_swing/JavaSwingApp/src/com/diego/pe/cpresentacion/JFramePrincipal.java</file>
             <file>file:/D:/dlp/dlp_java_swing/JavaSwingApp/src/com/diego/pe/db/Conexion.java</file>
+            <file>file:/D:/dlp/dlp_java_swing/JavaSwingApp/src/com/diego/pe/cpresentacion/JPPersonaDocumento.java</file>
             <file>file:/D:/dlp/dlp_java_swing/JavaSwingApp/src/com/diego/pe/cnegocio/TipoDocumentoBO.java</file>
             <file>file:/D:/dlp/dlp_java_swing/JavaSwingApp/src/com/diego/pe/ctest/Test.java</file>
             <file>file:/D:/dlp/dlp_java_swing/JavaSwingApp/src/com/diego/pe/cpresentacion/jpTipoDocumento.java</file>

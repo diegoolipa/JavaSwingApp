@@ -4,6 +4,10 @@
  */
 package com.diego.pe.cpresentacion;
 
+import com.diego.pe.cmodelo.TipoDocumento;
+import com.diego.pe.cnegocio.TipoDocumentoBO;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Soporte
@@ -15,6 +19,16 @@ public class JPPersonaDocumento extends javax.swing.JPanel {
      */
     public JPPersonaDocumento() {
         initComponents();
+        listarTipoDocumentoCombo();
+    }
+    
+    private void listarTipoDocumentoCombo(){
+        TipoDocumentoBO tdbo =new TipoDocumentoBO();
+        
+        for(TipoDocumento item : tdbo.listarTipoDocumentoCombo()){
+            jcTipoDocumento.addItem(item.getIdTipoDocumento()+" "+item.getNombre());
+        }
+        
     }
 
     /**
@@ -384,6 +398,11 @@ public class JPPersonaDocumento extends javax.swing.JPanel {
         jPanel3.add(jSeparator12, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 380, 10));
 
         jcTipoDocumento.setBorder(null);
+        jcTipoDocumento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcTipoDocumentoActionPerformed(evt);
+            }
+        });
         jPanel3.add(jcTipoDocumento, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 360, -1));
 
         jLabel24.setForeground(new java.awt.Color(102, 102, 102));
@@ -461,8 +480,28 @@ public class JPPersonaDocumento extends javax.swing.JPanel {
     }//GEN-LAST:event_btnLimpiar2ActionPerformed
 
     private void btnGuardar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardar2ActionPerformed
-
+        
+        String tdSeleccionado = (String)jcTipoDocumento.getSelectedItem();
+        String idPersona = tdSeleccionado.split(" ")[0];
+        
+        System.out.println("id: " + idPersona);
+        
+        try {
+//            td.setNombre(txtNombre.getText());
+//            td.setBillete(txtEstado.getText());
+//            td.setIdPerosona(idPersona);
+//            tdbo.agregarTipoDocomento(td);
+//            listarTipoDocumento();
+            JOptionPane.showMessageDialog(null, ":) se guardo corectamente");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error: al guardar Tipo documento ");
+        }
+        
     }//GEN-LAST:event_btnGuardar2ActionPerformed
+
+    private void jcTipoDocumentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcTipoDocumentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcTipoDocumentoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -6,6 +6,7 @@ import com.diego.pe.cdatosdao.TipoDocumentoDao;
 import com.diego.pe.cmodelo.TipoDocumento;
 import com.diego.pe.db.Conexion;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import javax.swing.JTable;
 
 public class TipoDocumentoBO {
@@ -59,5 +60,17 @@ public class TipoDocumentoBO {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         } 
+    }
+    
+    public ArrayList<TipoDocumento> listarTipoDocumentoCombo(){
+        ArrayList<TipoDocumento> listaTipoDocumento = new ArrayList<>();
+        Connection c = Conexion.getConnection();
+        listaTipoDocumento = tdd.listarTipoDocumentosCombo(c);
+        try {
+            c.close();
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        } 
+        return listaTipoDocumento;
     }
 }
